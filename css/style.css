@@ -13,6 +13,16 @@ body{
   background-color:#7bd361;
 }
 
+
+#uno{
+  display: block;
+}
+
+#dora{
+  display: none;
+}
+
+
 .centered{
   display:flex; 
   position:absolute; 
@@ -34,6 +44,30 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.submit-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.button{
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  
+}
+
+.button:hover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #4CAF50;
+  color: white;
 }
 
 .drag-area.active{
@@ -71,9 +105,9 @@ body{
 }
 
 .drag-area img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  height: 80%;
+  width: 80%;
+  background: gray;
   border-radius: 5px;
 }
 

@@ -16,17 +16,32 @@
 <body>
 
 	<div class ="centered">
-		<div class="file-container"> 
 			<div class="file-container">
-				<div class="drag-area">
-					<div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
-					<header> Drag & Drop to Upload File</header>
-					<span> OR </span>
-					<button> Browse File</button>
-					<input type="file" hidden>
+				<div id="uno">
+					<div  class="drag-area">
+						<div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+						<header> Drag & Drop to Upload File</header>
+						<span> OR </span>
+						<button> Browse File</button>
+						<input type="file" hidden>
+					</div>
 				</div>
+
+				<div  id ="dora" >
+					<div class="drag-area">
+						<canvas id="myCanvas" width="300" height="200" style="border:0px solid #d3d3d3;"></canvas>
+					</div>
+
+					<div class="submit-button" style="margin-top:10px;">
+						<button class="button">Submit</button>
+					</div>
+				</div>
+
+				<script src="js/script.js"></script>
+
 			</div>
-		</div>
+				
+			</div>
    </div>
 
    <script src="./path/to/dropzone.js"></script>

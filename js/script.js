@@ -42,13 +42,18 @@ dropArea.addEventListener("drop", (event)=>{
 function showFile(){
     let fileType = file.type;
     console.log(fileType);
-    let validExtensions = ["application/vnd.openxmlformats-officedocument.presentationml.presentation", "image/png", "image/jpg"];
+    let validExtensions = ["application/vnd.openxmlformats-officedocument.presentationml.presentation", "image/jpeg", "image/jpg"];
     if(validExtensions.includes(fileType)){
         let fileReader = new FileReader(); // creating new filereader object
         fileReader.onload = ()=>{
-            let fileURL = fileReader.result; // passing user file source in fileURL variable
-            let imgTag = `<img src="${fileURL}" alt="">`; //creating an img tag and passing user selected file source inside src attribute
-            dropArea.innerHTML = imgTag;
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.rect(50, 20, 200, 150);
+            ctx.fill();
+            document.getElementById("uno").style.display = "none";
+            document.getElementById("dora").style.display = "block";
+            console.log("wtf man");
         }
         fileReader.readAsDataURL(file);
     }
